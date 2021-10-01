@@ -36,11 +36,11 @@ def PrintBoard():
 PrintBoard()
 
 
-def MakeMove(board, x, y, player): # assuming valid move
+def MakeMove(board, x, y, player): 
     taken = 0 # total number of opponent pieces taken
     board[x][y] = player
     
-    for d in range(8): # 8 directions
+    for d in range(8): 
         ctr = 0
         for i in range(n):
             dx = x + dirx[d] * (i + 1)
@@ -169,12 +169,7 @@ def drawAll(img, buttonList = [], button1=None):
         w, h = button.size
         center_coordinates = circle.coor
         cv2.rectangle(img, button.pos, (x + w, y + h), (8, 102, 5), cv2.FILLED)
-        # if (int(button.column) == z and int(button.row) == z) or (int(button.column) == n - 1 - z and int(button.row) == n - 1 - z):
-        #     cv2.circle(img, center_coordinates, 100, (0,0,0), -1)
-        # elif (int(button.column) == z and int(button.row) == n - 1 - z) or (int(button.column) == n - 1 - z and int(button.row) == z):
-        #     cv2.circle(img, center_coordinates, 100, (255,255,255), -1)
-        # else:
-        #     cv2.circle(img, center_coordinates, 100, (255,255,0), -1)
+        
     if button1:
         button2 = button1
         x1, y1 = button2.pos
@@ -269,7 +264,7 @@ while True:
                     l, _, _ = detector.findDistance(8, 12, img)
 
                     if l < 100:
-                        #cv2.rectangle(img, button.pos, (x + w, y + h), (0, 255, 0), cv2.FILLED)
+                       
                         
                         x = int(button.row)
                         y = int(button.column)
