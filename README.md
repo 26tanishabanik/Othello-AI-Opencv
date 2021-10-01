@@ -6,3 +6,4 @@ Othello, also known as Reversi, is a classic baord game which uses circular disc
 
 ## Demo Video:
 
+https://www.youtube.com/watch?v=CuPH2CtTJnI
